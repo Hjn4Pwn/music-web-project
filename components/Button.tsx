@@ -24,6 +24,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                 boder-transparent
                 px-3
                 py-3
+                
                 disabled:opacity-50
                 text-black
                 font-bold

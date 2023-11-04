@@ -1,7 +1,14 @@
 import Header from "@/components/Header";
 import ListItem from "@/components/ListItem";
 import Head from 'next/head';
-export default function Home() {
+import getSongs from '@/actions/getSongs';
+import PageContent from "./components/PageContent";
+
+export const revalidate = 0;
+
+export default async function Home() {
+  const songs = await getSongs();
+
   return (
 
 
@@ -12,7 +19,7 @@ export default function Home() {
     w-full
     overflow-hidden
     overflow-y-auto
-  ">
+    ">
       <Header>
         <div className="mb-2">
           <h1 className="
@@ -34,7 +41,7 @@ export default function Home() {
             <ListItem
               image="/images/liked.png"
               name="Liked Songs"
-              href="liked"
+              href="/liked"
             />
           </div>
         </div>
@@ -44,6 +51,9 @@ export default function Home() {
           <h1 className="text-white text-2xl font-semibold">
             Newest songs
           </h1>
+        </div>
+        <div>
+          <PageContent songs={songs}/>
         </div>
       </div>
     </div>

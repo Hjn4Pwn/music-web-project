@@ -7,7 +7,7 @@ import Link from "next/link";
 interface SidebarItemProps {
     icon: IconType;
     label: string;
-    active: boolean;
+    active?: boolean;
     href: string
 }
 
@@ -40,12 +40,10 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
                 )}
             
             >
-                <Icon size={26}>
+                <Icon size={26} />
                     <p className="truncate w-full">
                         {label}
                     </p>
-
-                </Icon>
         </Link>
     );
 }
