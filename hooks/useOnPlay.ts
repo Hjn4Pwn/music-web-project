@@ -1,7 +1,7 @@
 import { Song } from "@/types";
 
 import usePlayer from "./usePlayer";
-import useSubscribeModal from "@/hooks/useSubscribeModal";
+import useSubscribeModal from "./useSubscribeModal";
 import useAuthModal from "./useAuthModal";
 import { useUser } from "./useUser";
 
@@ -16,7 +16,7 @@ const useOnPlay = (songs: Song[]) => {
       return authModal.onOpen();
     }
 
-    if (!subscription) {
+    if (subscription) {
       return subscribeModal.onOpen();
     }
 
