@@ -21,7 +21,7 @@ const ListItem: React.FC<ListItemProps> = ({
   const router = useRouter();
   const authModal = useAuthModal();
   const { user } = useUser();
-  
+
   const onClick = () => {
     if (!user) {
       return authModal.onOpen();
@@ -30,7 +30,7 @@ const ListItem: React.FC<ListItemProps> = ({
     router.push(href);
   };
 
-  return ( 
+  return (
     <button
       onClick={onClick}
       className="
@@ -59,7 +59,7 @@ const ListItem: React.FC<ListItemProps> = ({
       <p className="font-medium truncate py-5">
         {name}
       </p>
-      <div 
+      <div
         className="
           absolute 
           transition 
@@ -68,7 +68,7 @@ const ListItem: React.FC<ListItemProps> = ({
           flex 
           items-center 
           justify-center 
-          bg-green-500 
+          bg-purple-500 
           p-4 
           drop-shadow-md 
           right-5
@@ -79,7 +79,7 @@ const ListItem: React.FC<ListItemProps> = ({
         <FaPlay className="text-black" />
       </div>
     </button>
-   );
+  );
 }
- 
+
 export default ListItem;

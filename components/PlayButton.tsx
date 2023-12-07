@@ -1,7 +1,7 @@
 import { FaPlay } from "react-icons/fa";
 
 const PlayButton = () => {
-  return ( 
+  return (
     <button
       className="
         transition 
@@ -10,7 +10,7 @@ const PlayButton = () => {
         flex 
         items-center 
         justify-center 
-        bg-green-500 
+        bg-purple-500 
         p-4 
         drop-shadow-md 
         translate
@@ -22,7 +22,7 @@ const PlayButton = () => {
     >
       <FaPlay className="text-black" />
     </button>
-   );
+  );
 }
- 
+
 export default PlayButton;
