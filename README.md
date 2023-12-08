@@ -2,7 +2,7 @@
 - Dùng **npm run dev** or **yarn devv** or **node src/index.js** để run
 - Mở localhost:3000 để đợi compile
 
-![Alternate Text](./songs_upload/image_video.png)
+![Demo image](./songs_upload/demo_image.png)
 <!-- ```bash
 npm run dev
 # or
